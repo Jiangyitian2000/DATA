@@ -168,11 +168,11 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'Natural Parks',
-                    opacity: 1
+                    opacity: 0
                 },
                 {
                     layer: 'City Park Attractions',
-                    opacity: 1               
+                    opacity: 0             
                 },
                 {
                     layer: 'Visitor Density Heat Map1',
@@ -185,7 +185,75 @@ var config = {
                 },
                 {
                     layer: 'Trail Network',
-                    opacity: 0.3
+                    opacity: 1
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'Natural Parks',
+                    opacity: 0
+                },
+                {
+                    layer: 'City Park Attractions',
+                    opacity: 0               
+                },
+                {
+                    layer: 'Visitor Density Heat Map1',
+                    opacity: 0
+
+                },
+                {
+                    layer: 'Visitor Density Heat Map2',
+                    opacity: 0
+                },
+                {
+                    layer: 'Trail Network',
+                    opacity: 1
+                }
+            ]
+        },
+        {
+            id: 'fourth-container',
+            alignment: 'right',
+            hidden: false,
+            title: 'Explore and share your stories',
+            description: "Singapore's parks are much more than just popular attractions. Explore hidden treasures such as Punggol Park or suggest ways to improve existing parks. Tell us about your experiences through our crowdsourcing platform and help build a better tourism future!",
+            location: {
+                center: [103.8198, 1.3521],
+                zoom: 11,
+                pitch: 0,
+                bearing: 0,
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                speed: 10, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'Natural Parks',
+                    opacity: 1
+                },
+                {
+                    layer: 'City Park Attractions',
+                    opacity: 1               
+                },
+                {
+                    layer: 'Visitor Density Heat Map1',
+                    opacity: 1
+
+                },
+                {
+                    layer: 'Visitor Density Heat Map2',
+                    opacity: 1
+                },
+                {
+                    layer: 'Trail Network',
+                    opacity: 1
                 }
             ],
             onChapterExit: [
@@ -199,16 +267,16 @@ var config = {
                 },
                 {
                     layer: 'Visitor Density Heat Map1',
-                    opacity: 0
+                    opacity: 1
 
                 },
                 {
                     layer: 'Visitor Density Heat Map2',
-                    opacity: 0
+                    opacity: 1
                 },
                 {
                     layer: 'Trail Network',
-                    opacity: 0.3
+                    opacity: 1
                 }
             ]
         }
